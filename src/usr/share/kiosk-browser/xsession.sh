@@ -35,20 +35,20 @@ until (( SECONDS > end_time)) || [[ "$(ip route)" == *default* ]] ; do
     wait $!
 done
 
+function info_display {
 # show debug info for 60 seconds as overlay
 {
-    echo "Welcome to the Kiosk Browser (http://github.com/ImmobilienScout24/kiosk-browser)"
+    echo "Welcome to the Kiosk Browser"
     echo
     echo "This is $(uname -n)"
-    ip a
-    ip route
-    cat /etc/resolv.conf
-    perl -e '$/ = undef; $d=<>; $d =~ m/.*(lease {.*?})$/s ; print $1' $(ps ax | grep dhclient | sed -ne "s/.* \(\/[^ ]\+\.lease[s]\?\).*/\1/p") <<<""
     echo
-    echo "This message will self-destruct in 60 seconds"
-} | osd_cat --pos bottom --align left --colour green --outline 2 --font 10x20 --lines 50 --delay 60 &
+    /sbin/ifconfig | grep "inet " | grep -v "addr:127.0" | sed -e 's/^ *//g'
+    echo ""
+    echo "This message will self-destruct in 30 seconds"
+} | osd_cat --pos bottom --align left --colour green --outline 2 --font 10x20 --lines 50 --delay 30 &
 
 disown -a # forget about running osd_cat, it will terminate itself anyway
+}
 
 # window manager helps with fullscreen, window manager must support XINERAMA for multi-screen setups
 openbox --debug --config-file /usr/share/kiosk-browser/openbox-rc.xml &
@@ -108,6 +108,8 @@ wait $!
 
 # xrandr configuration changed, update cache
 XRANDR_OUTPUT="$(xrandr)"
+
+info_display
 
 # disable screen blanking
 xset -dpms

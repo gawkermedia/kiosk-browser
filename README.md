@@ -1,7 +1,8 @@
 kiosk-browser
 =============
 
-[![Join the chat at https://gitter.im/ImmobilienScout24/kiosk-browser](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ImmobilienScout24/kiosk-browser?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+Forked from https://github.com/ImmobilienScout24/kiosk-browser
 
 Ubuntu/Debian/Raspbian package to set up a system as a kiosk browser. Release announcement and example photo can be found on my blog at http://blog.schlomo.schapiro.org/2012/09/dashboards-made-easy.html.
 

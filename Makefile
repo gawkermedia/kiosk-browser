@@ -1,4 +1,4 @@
-.PHONY: info repo clean
+.PHONY: info clean
 
 *.deb:	check_status clean
 	rm -Rf build
@@ -17,9 +17,6 @@
 info: out/*.deb
 	dpkg-deb -I out/*.deb
 	dpkg-deb -c out/*.deb
-
-repo: out/*.deb
-	../putinrepo.sh out/*.deb
 
 clean:
 	rm -fr out build
