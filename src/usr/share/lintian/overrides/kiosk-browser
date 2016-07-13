@@ -1,1 +1,2 @@
 kiosk-browser: binary-without-manpage usr/bin/kiosk-browser-control
+kiosk-browser: binary-without-manpage usr/sbin/kiosk-browser-computestick-jobs
