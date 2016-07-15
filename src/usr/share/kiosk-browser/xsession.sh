@@ -50,6 +50,16 @@ function info_display {
 disown -a # forget about running osd_cat, it will terminate itself anyway
 }
 
+function permanent_info_display () {
+     {
+       while true; do
+         echo "$(uname -n) $(/sbin/ifconfig | grep "inet " | grep -v "addr:127.0" | sed -e 's/^ *//g'|cut -d' ' -f2|cut -d: -f2)" | \
+           osd_cat --pos bottom --align right --colour green --outline 2 --font 10x20 --lines 1 --delay 300
+       done } &
+
+    disown -a
+}
+
 # window manager helps with fullscreen, window manager must support XINERAMA for multi-screen setups
 openbox --debug --config-file /usr/share/kiosk-browser/openbox-rc.xml &
 
@@ -110,6 +120,7 @@ wait $!
 XRANDR_OUTPUT="$(xrandr)"
 
 info_display
+permanent_info_display
 
 # disable screen blanking
 xset -dpms
