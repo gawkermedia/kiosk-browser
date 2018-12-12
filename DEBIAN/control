@@ -5,7 +5,7 @@ Section: web
 Architecture: all
 Maintainer: Attila Kocsis <attila.kocsis@kinja.com>
 Pre-Depends: nodm
-Depends: chromium | chromium-browser, epiphany-browser, uzbl, x11-xserver-utils, xdotool, x11-apps, sudo, imagemagick, debconf, xtightvncviewer, xosd-bin, xosview, openbox
+Depends: chromium | chromium-browser, epiphany-browser, x11-xserver-utils, xdotool, x11-apps, sudo, imagemagick, debconf, xtightvncviewer, xosd-bin, xosview, openbox
 Homepage: https://github.com/kocsisa/kiosk-browser
 Description: Web Browser for non-interactive use like a web kiosk
  Setup system to work as a kiosk browser, showing only a full-screen browser.
