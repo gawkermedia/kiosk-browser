@@ -23,13 +23,14 @@ LICENSE.txt for full license text.
 Building
 ========
 
-1. Install `fakeroot`, `lintian` and `dpkg`.
+1. Install `make`, `fakeroot`, `lintian` and `dpkg`.
 1. Checkout this github repo and type `make`.
 1. In `out` you should find the resulting .deb package file.
 
 Installation
 ============
 
+1. Install dependencies. `apt-get install nodm chromium-browser epiphany-browser x11-xserver-utils xdotool x11-apps sudo imagemagick debconf xtightvncviewer xosd-bin xosview openbox`
 1. Install the .deb package you build just now from the `out` directory
 1. Create `/etc/default/kiosk-browser` and set `KIOSK_BROWSER_START_PAGE`
 1. Reboot the system
