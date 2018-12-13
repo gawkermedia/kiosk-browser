@@ -201,11 +201,6 @@ while sleep 5 & wait $!; do
             wait $!
             # Use PID to distinguish browsers
             xdotool search --class epiphany-$c windowmove --sync $port_x 0 key F11
-        elif [[ "$KIOSK_BROWSER_PROGRAM" == "uzbl" ]] && type -p uzbl &>/dev/null ; then
-            uzbl -n uzbl-$c -c - "$URL" <<<"$UZBL_CONFIG" &
-            sleep 5 &
-            wait $!
-            xdotool search --class uzbl-$c windowmove --sync $port_x 0
         else
             $CHROME --user-data-dir=$BROWSER_PROFILE_DIR "${KIOSK_BROWSER_OPTIONS[@]}" --use-fake-ui-for-media-stream --disable-translate --no-first-run --start-fullscreen --app="$URL" &
             PID=$!

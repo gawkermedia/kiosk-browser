@@ -74,7 +74,7 @@ If you don't know if the VGA port is called VGA or VGA1 you can specify a substr
 Different Browsers
 ------------------
 
-The default browser is [Chromium](http://www.chromium.org/). kiosk-browser also supports [Epiphany](https://wiki.gnome.org/Apps/Web) and [Uzbl](http://www.uzbl.org/) as browsers. To use a different browser set the `KIOSK_BROWSER_PROGRAM` variable to either `epiphany` or `uzbl`. Since September 2014 epiphany [has been greatly improved on Raspberry Pi](http://www.raspberrypi.org/web-browser-released/) so that it is worth to try it out.
+The default browser is [Chromium](http://www.chromium.org/). kiosk-browser also supports [Epiphany](https://wiki.gnome.org/Apps/Web) as browser. To use a different browser set the `KIOSK_BROWSER_PROGRAM` variable to either `epiphany`. Since September 2014 epiphany [has been greatly improved on Raspberry Pi](http://www.raspberrypi.org/web-browser-released/) so that it is worth to try it out.
 
 Virtual Projector
 -----------------

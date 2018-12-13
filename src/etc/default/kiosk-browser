@@ -1,4 +1,4 @@
 KIOSK_BROWSER_XRANDR_EXTRA_OPTS="--rotate left"
 KIOSK_BROWSER_START_PAGE=file:///usr/local/src/dashboards/dashboard/dashboard.html
-KIOSK_BROWSER_PROGRAM=uzbl
+KIOSK_BROWSER_PROGRAM=chromium-browser
 KIOSK_BROWSER_WATCHDOG_TIMEOUT=300

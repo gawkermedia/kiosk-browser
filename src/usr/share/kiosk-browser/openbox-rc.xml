@@ -26,9 +26,4 @@ openbox configuration for kiosk-browser
     <maximized>true</maximized>
   </application>
 
-  <application name="uzbl*">
-    <fullscreen>yes</fullscreen>  
-  </application>  
-</applications>
-
 </openbox_config>
